@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/zbengued/vogsphere/philosophers/philo'
+let g:netrw_dirhist_4='/goinfre/zbengued/senseeeeei/Maps'
+let g:netrw_dirhist_3='/goinfre/zbengued/senseeeeei'
+let g:netrw_dirhist_2='/usr/share/42/scripts'
+let g:netrw_dirhist_1='/home/zbengued/.config/kitty'
