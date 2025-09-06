@@ -1,0 +1,99 @@
+{
+	"include": [
+		// "$HOME/.config/waybar/modules/*.jsonc",
+		// "$HOME/.config/waybar/modules/custom/*.jsonc",
+		// "$HOME/.config/waybar/modules/hyprland/*.jsonc",
+		"home/ixchele/.config/waybar/modules/hyprland/windowcount.jsonc",
+		"home/ixchele/.config/waybar/modules/hyprland/window.jsonc",
+		"home/ixchele/.config/waybar/modules/hyprland/workspaces.jsonc",
+		"/home/ixchele/.config/waybar/modules/custom/distro.jsonc",
+		"/home/ixchele/.config/waybar/modules/custom/dividers.jsonc",
+		"/home/ixchele/.config/waybar/modules/custom/power_menu.jsonc",
+		"/home/ixchele/.config/waybar/modules/custom/system_update.jsonc",
+		"/home/ixchele/.config/waybar/modules/custom/theme_switcher.jsonc",
+		"/home/ixchele/.config/waybar/modules/backlight.jsonc",
+		"/home/ixchele/.config/waybar/modules/cpu.jsonc",
+		"/home/ixchele/.config/waybar/modules/network.jsonc",
+		"/home/ixchele/.config/waybar/modules/battery.jsonc",
+		"/home/ixchele/.config/waybar/modules/idle_inhibitor.jsonc",
+		"/home/ixchele/.config/waybar/modules/temperature.jsonc",
+		"/home/ixchele/.config/waybar/modules/bluetooth.jsonc",
+		"/home/ixchele/.config/waybar/modules/memory.jsonc",
+		"/home/ixchele/.config/waybar/modules/wireplumber.jsonc",
+		"/home/ixchele/.config/waybar/modules/clock.jsonc",
+		"/home/ixchele/.config/waybar/modules/mpris.jsonc"
+	],
+
+	/*------------
+		layout
+	------------*/
+
+	"modules-left": [
+		"group/theme_switcher",
+		"custom/left_div#1",
+		"hyprland/workspaces",
+		"custom/right_div#1",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"hyprland/windowcount",
+		"custom/left_div#2",
+		"temperature",
+		"custom/left_div#3",
+		"memory",
+		"custom/left_div#4",
+		"cpu",
+		"custom/left_inv#1",
+		"custom/left_div#5",
+		"custom/distro",
+		"custom/right_div#2",
+		"custom/right_inv#1",
+		"idle_inhibitor",
+		"clock#time",
+		"custom/right_div#3",
+		"clock#date",
+		"custom/right_div#4",
+		"network",
+		"bluetooth",
+		"custom/system_update",
+		"custom/right_div#5"
+	],
+	"modules-right": [
+		"mpris",
+		"custom/left_div#6",
+		"group/wireplumber",
+		"custom/left_div#7",
+		"backlight",
+		"custom/left_div#8",
+		"battery",
+		"custom/left_inv#2",
+		"custom/power_menu"
+	],
+
+	/*-------------
+		options
+	-------------*/
+
+	"layer": "top",
+	// "output":
+	// "position":
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	// "margin-top":
+	// "margin-left":
+	// "margin-bottom":
+	// "margin-right":
+	"spacing": 0,
+	// "name":
+	"mode": "dock",
+	// "start_hidden":
+	// "modifier-reset":
+	// "exclusive":
+	// "fixed-center":
+	// "passthrough":
+	// "ipc":
+	// "id":
+	"reload_style_on_change": true
+	// "gtk-layer-shell":
+}

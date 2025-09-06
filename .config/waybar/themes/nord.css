@@ -1,0 +1,56 @@
+/* nord dark theme */
+
+/*------------------------
+	base palette
+------------------------*/
+
+@define-color polar-night0    #1B2229; /* plus sombre que le polar-night0 classique */
+@define-color polar-night1    #2C323C;
+@define-color polar-night2    #3B4252;
+@define-color polar-night3    #434C5E;
+@define-color snow-storm0     #D8DEE9;
+@define-color snow-storm1     #E5E9F0;
+@define-color snow-storm2     #ECEFF4;
+@define-color frost0          #8FBCBB;
+@define-color frost1          #88C0D0;
+@define-color frost2          #81A1C1;
+@define-color aurora0         #BF616A;
+@define-color aurora1         #D08770;
+@define-color aurora2         #EBCB8B;
+@define-color aurora3         #A3BE8C;
+@define-color aurora4         #B48EAD;
+
+/*------------------------
+	main colors
+------------------------*/
+
+@define-color main-br        @polar-night2;
+@define-color main-bg        @polar-night0;   /* très sombre pour fond */
+@define-color main-fg        @snow-storm1;
+@define-color accent         @frost2;
+@define-color hover-bg       @polar-night1;
+@define-color hover-fg       alpha(@snow-storm1, 0.75);
+@define-color shadow         shade(@polar-night0, 0.5);
+
+/*------------------------
+	module colors
+------------------------*/
+
+@define-color workspaces     @polar-night1;
+@define-color temperature    @polar-night1;
+@define-color memory         @polar-night0;
+@define-color cpu            @polar-night2;
+@define-color time           @polar-night2;
+@define-color date           @polar-night0;
+@define-color tray           @polar-night1;
+@define-color wireplumber    @polar-night1;
+@define-color backlight      @polar-night0;
+@define-color battery        @polar-night2;
+
+/*------------------------
+	state colors
+------------------------*/
+
+@define-color warning        @aurora2;
+@define-color critical       @aurora0;
+@define-color charging       @aurora3;
