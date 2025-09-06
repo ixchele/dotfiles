@@ -1,0 +1,10 @@
+local dap = require("dap")
+
+vim.api.nvim_set_keymap('n', '<F5>', "<cmd>lua require'dap'.continue()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<F10>', "<cmd>lua require'dap'.step_over()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<F11>', "<cmd>lua require'dap'.step_into()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<F12>', "<cmd>lua require'dap'.step_out()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>br', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>B', "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>dr', "<cmd>lua require'dap'.repl.open()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>du', "<cmd>lua require'dapui'.toggle()<CR>", { noremap = true })

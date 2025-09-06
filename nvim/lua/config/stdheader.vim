@@ -1,3 +1,8 @@
+"infos" 
+let g:mail42 = "zbengued@student.1337.ma"
+let g:user42 = "zbengued"
+let g:stdheader_name = "ixchele"
+
 let s:asciiart = [
 			\"        :::      ::::::::",
 			\"      :+:      :+:    :+:",
@@ -144,6 +149,33 @@ function! s:stdheader()
 		call s:insert()
 	endif
 endfunction
+
+function! StdheaderRemoveIfExists()
+    let l:header_lines = 11
+    let l:lines = getline(1, l:header_lines)
+
+    " Vérifie si les 11 premières lignes correspondent au header
+    for l:line in l:lines
+        let l:trimmed = substitute(l:line, '\s\+$', '', '')
+        if l:trimmed !~ '^/\*' || l:trimmed !~ '\*/$' || len(l:trimmed) < 50
+            return
+        endif
+    endfor
+
+    " Supprime le header
+    execute '1,' . l:header_lines . 'd'
+
+    " Supprime toutes les lignes vides consécutives après le header
+    while getline(1) ==# ''
+        execute '1d'
+        " Evite d'erreur si fichier devient vide
+        if line('$') == 0
+            break
+        endif
+    endwhile
+endfunction
+
+command! StdheaderRemoveIfExists call StdheaderRemoveIfExists()
 
 " Bind command and shortcut
 command! Stdheader call s:stdheader ()
